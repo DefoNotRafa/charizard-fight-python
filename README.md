@@ -5,12 +5,13 @@ include everything below this text to play
 
 
 
-from colorama import init
-init(convert=True)
-def bossfight():
+
+
+	from colorama import init
+	init(convert=True)
+	def bossfight():
 	import random
 	import time
-
 	RED = "\033[91m"
 	GREEN = "\033[92m"
 	YELLOW = "\033[93m"
@@ -18,7 +19,7 @@ def bossfight():
 	RESET = "\033[0m"
 	myhp = 100
 	BossHp = 135
-	
+
 	print(f"{RED} a wild charizard has appeared {RESET} ")
 	
 	print(
@@ -138,6 +139,8 @@ def bossfight():
 			# loss
 			elif loss == "n":
 				print("pussy")
+
+				bossfight()
 				break
 
 
