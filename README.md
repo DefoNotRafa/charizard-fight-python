@@ -8,8 +8,8 @@ include everything below this text to play
 
 
 	from colorama import init
-	init(convert=True)
-	def bossfight():
+init(convert=True)
+def bossfight():
 	import random
 	import time
 	RED = "\033[91m"
@@ -21,11 +21,11 @@ include everything below this text to play
 	BossHp = 135
 
 	print(f"{RED} a wild charizard has appeared {RESET} ")
-	
+
 	print(
 		f"print {GREEN} 'attack/heal'{RESET} to do action, print {RED} 'ATTACK/HEAL'{RESET} to do a stronger version of both actions with a chance of the action failing"
 	)
-
+	
 	while myhp > 0 and BossHp > 0:
 		print(f"Your HP: {GREEN} {myhp}{RESET} Boss HP: {RED} {BossHp}{RESET}")
 		action = input(
@@ -34,9 +34,9 @@ include everything below this text to play
 		# your attack
 		if action == "attack":
 			damage = random.randint(15, 25)
-
+	
 			BossHp = BossHp - damage
-
+	
 			print(
 				f"{YELLOW} you lift your sword and voilently swing at the charizard{RESET}"
 			)
@@ -60,20 +60,20 @@ include everything below this text to play
 					f"you feel a sudden charge inside of you. You place one foot down, stretch your sword behind and swing as hard as you can.{RESET} "
 				)
 				time.sleep(3)
-
+	
 				time.sleep(1)
 				print(f"{YELLOW} SSWWWWWOOOOOOOSSSSHHHHH")
-
+	
 				BossHp = BossHp - damage
 				print(
 					f"Charizard has taken a heavy blow and lost{RED} {damage}{YELLOW} Hp, Charizard now has{RED} {BossHp} {RESET} HP left"
 				)
-
+	
 			# your heal
 		elif action == "heal":
 			HealAmount = random.randint(10, 20)
 			myhp = HealAmount + myhp
-
+	
 			print(
 				f"{YELLOW} you grab a small bottle of a strange blue liquid and drink it{RESET} "
 			)
@@ -95,14 +95,14 @@ include everything below this text to play
 				time.sleep(2)
 				print(f"you healed {HealthAmount} and now have {myhp} HP left.")
 		time.sleep(1)
-
+	
 		print("Charizard is deciding...")
-
+	
 		time.sleep(2)
-
+	
 		if BossHp > 0:
 			BossChoice = random.randint(1, 4)
-
+	
 			# heal
 			if BossHp < 90 and BossChoice == 1:
 				BossHeal = random.randint(10, 30)
@@ -129,19 +129,16 @@ include everything below this text to play
 				break
 		if myhp <= 0:
 			loss = input("you lost, would you like to try again? Y/N ").lower()
-
+	
 			# retry
 			if loss == "y":
 				print("travelling back in time...")
 				time.sleep(1)
 				continue
-
+	
 			# loss
 			elif loss == "n":
 				print("ok")
-
+	
 				bossfight()
 				break
-
-
-bossfight()
