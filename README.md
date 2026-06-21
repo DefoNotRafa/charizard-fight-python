@@ -125,7 +125,7 @@ include everything below this text to play
 				myhp = 100
 				print("Charizard has now healed back to 135 HP!")
 			elif win == "n":
-				print("pussy")
+				print("ok")
 				break
 		if myhp <= 0:
 			loss = input("you lost, would you like to try again? Y/N ").lower()
@@ -138,7 +138,7 @@ include everything below this text to play
 
 			# loss
 			elif loss == "n":
-				print("pussy")
+				print("ok")
 
 				bossfight()
 				break
